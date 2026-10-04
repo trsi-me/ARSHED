@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arshad - Interactive Scenarios</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#8b5cf6", secondary: "#6b7280" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    input:focus,
+    button:focus {
+      outline: none;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- الهيدر -->
+  <nav class="py-4 px-4 md:px-8 border-b shadow-sm bg-white">
+    <div class="w-full flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="Arshed-html.html" data="true" class="font-['Pacifico'] text-2xl text-primary mr-10">Arshad</a>
+        <div class="hidden md:flex space-x-6">
+          <a href="Arshed-html.html" class="text-gray-700 hover:text-primary font-medium">Home</a>
+          <a href="#" class="text-gray-700 hover:text-primary font-medium">Training Content</a>
+          <a href="#" class="text-gray-700 hover:text-primary font-medium">Challenges</a>
+          <a href="#" class="text-primary font-medium border-b-2 border-primary">Scenarios</a>
+          <a href="#" class="text-gray-700 hover:text-primary font-medium">AI vs. Traditional</a>
+          <a href="#" class="text-gray-700 hover:text-primary font-medium">Contact Us</a>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <a href="#" class="text-gray-700 hover:text-primary font-medium">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- المحتوى -->
+  <div class="container">
+    <!-- السيناريو -->
+    <div class="scenario-box">
+      <h2>What is your decision?</h2>
+      <p>Loading scenario...</p>
+      <!-- الخيارات سيتم إضافتها ديناميكياً من JavaScript -->
+      <button class="submit-btn" onclick="showFeedback()">Submit Decision</button>
+
+      <!-- التنقل بين الصفحات -->
+      <div class="pagination">
+        <a href="index9.html" class="button">
+          < Previous </a>
+            <a href="index.html" class="button">1</a>
+            <a href="index2.html" class="button">2</a>
+            <a href="index3.html" class="button">3</a>
+            <a href="index4.html" class="button">4</a>
+            <a href="index5.html" class="button">5</a>
+            <a href="index6.html" class="button">6</a>
+            <a href="index7.html" class="button">7</a>
+            <a href="index8.html" class="button">8</a>
+            <a href="index9.html" class="button">9</a>
+            <a href="index10.html" class="active">10</a>
+            <a href="index11.html" class="button">11</a>
+            <a href="index12.html" class="button">12</a>
+            <a href="index13.html" class="button">13</a>
+            <a href="index14.html" class="button">14</a>
+            <a href="index15.html" class="button">15</a>
+            <a href="index16.html" class="button">16</a>
+            <a href="index17.html" class="button">17</a>
+            <a href="index18.html" class="button">18</a>
+            <a href="index19.html" class="button">19</a>
+            <a href="index20.html" class="button">20</a>
+            <a href="index11.html" class="button">Next></a>
+      </div>
+    </div>
+
+    <!-- الصورة -->
+    <div class="image-side">
+      <img src="images\p10.jpg" alt="Teacher">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

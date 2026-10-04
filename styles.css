@@ -1,0 +1,208 @@
+/* 🎨 ألوان ومتغيرات */
+:root {
+  --primary: #6a0dad;
+  --primary-dark: #580a9c;
+  --bg: #f7f5fb;
+  --text: #333;
+  --muted: #666;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* 🌍 القاعدة العامة */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 🔝 الهيدر */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px 25px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin-right: auto;
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+.navbar a:hover {
+  background: rgba(106, 13, 173, 0.1);
+  color: var(--primary);
+}
+.navbar .active {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 20px;
+}
+
+/* 📦 الحاوية */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+/* 📝 كارد السيناريو */
+.scenario-box {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 500px;
+  max-width: 100%;
+  animation: fadeIn 0.8s ease;
+}
+.scenario-box h2 {
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 24px;
+}
+.scenario-box p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.option {
+  margin: 14px 0;
+  font-size: 15px;
+  text-align: left;
+}
+.feedback {
+  display: none;
+  font-size: 13px;
+  margin: 6px 0 0 22px;
+  color: var(--muted);
+}
+
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.02);
+}
+
+/* 🖼️ الصورة */
+.image-side {
+  flex: 1;
+  text-align: center;
+}
+.image-side img {
+  width: 75%;
+  max-width: 450px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+.image-side img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+.button{
+  background: #d2bddd73;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+
+/* 📌 التنقل بين الصفحات */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 25px auto 0;
+  max-width: 500px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f1f1;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+}
+
+.pagination .active {
+  background: var(--primary-dark);
+  color: #fff;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(88, 10, 156, 0.35);
+}
+
+/* ✨ أنيميشن */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* 📱 استجابة */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image-side img {
+    width: 60%;
+  }
+  .option {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .pagination {
+    max-width: 90%;
+  }
+  .pagination button {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
