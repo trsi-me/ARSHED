@@ -186,7 +186,7 @@ ARSHED/
 └── README.md
 ```
 
-مجلد `images` المشار إليه في `index.html` (`images\p1.jpg`) وفي بيانات `insert_data.php`: غير موجود في الملفات الحالية.
+مجلد `images` موجود ويحتوي `p1.jpg` حتى `p20.jpg`. `index.html` و`insert_data.php` يشيران إلى هذه الصور.
 
 ## 18. واجهة المستخدم
 
@@ -342,8 +342,7 @@ PHP عبر `mysqli`. الإعدادات في `config.php`:
 - روابط الشريط ما عدا Home وScenarios لا تؤدي إلى صفحات (`#`)، وHome يطلب ملفاً غير موجود (`Arshed-html.html`).
 - لا حفظ للإجابات.
 - `showFeedback` محدودة بثلاثة خيارات.
-- صور `images/` غير موجودة في الملفات الحالية.
-- لا أيقونة تبويب (`favicon`) في `index.html`.
+- أيقونة التبويب (`favicon`) غير موجودة في `index.html`.
 - استعلامات `api.php` ليست Prepared Statements.
 
 ## 37. حالة النظام الحالية
